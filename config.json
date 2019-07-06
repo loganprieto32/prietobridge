@@ -1,34 +1,21 @@
 {
-    "bridge": {
-        "name": "Homebridge",
-        "username": "CC:22:3D:E3:CE:30",
-        "port": 51826,
-        "pin": "031-45-154"
-    },
+	"bridge": {
+		"name": "LOW IQ ENERGY",
+		"username": "CC:22:3D:E3:CE:30",
+		"port": 51826,
+		"pin": "031-45-157"
+	},
 
-    "description": "This is an example configuration file with all supported devices. You can use this as a template for creating your own configuration file containing devices you actually own.",
-
-    "platforms": [
-        {
-            "platform" : "TplinkSmarthome",
-            "name" : "TplinkSmarthome",
-            "timeout": 5
-        },
-        {
-            "platform": "Camera-ffmpeg",
-            "cameras": [
-              {
-                 "name": "SecurityCam",
-                 "videoConfig": {
-                     "source": "-f v412 -r 30 -s 1280x720 -i /dev/video0",
-                     "maxStreams": 2,
-                     "maxWidth": 1280,
-                     "maxHeight": 720,
-                     "maxFPS": 30,
-                     "vcodec": "h264_omx"
-                 }
-              }
-        ]
-      }
-    ]
+	"platforms": [{
+		"platform": "TplinkSmarthome",
+		"name": "TplinkSmarthome",
+		"timeout": 999,
+		"devices": [{
+				"host": "192.168.1.106"
+			},
+			{
+				"host": "192.168.1.107"
+			}
+		]
+	}]
 }
